@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'Boska-Extralight';
+    src: url('../fonts/Boska_Complete/Fonts/OTF/Boska-Extralight.otf');
+}
+@font-face {
+    font-family: 'Boska-BoldItalic';
+    src: url('../fonts/Boska_Complete/Fonts/OTF/Boska-BoldItalic.otf');
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+a{
+    text-decoration: none;
+}
+body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    overflow: hidden;
+    height: 100vh;
+}
+main{
+    position: relative;
+    width: 100%;
+    height: 811px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+img{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+.presentacion{
+    position: relative;
+    width: 30%;
+    margin-top: -100px;
+    margin-left: -900px;
+}
+h1{
+    font-family: 'Boska-BoldItalic';
+    font-size: 4em;
+}
+p{
+    font-family: 'Boska-Extralight';
+    font-size: 1.3em;
+}
+footer{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4em;
+    z-index: 2;
+}
+footer a{
+    position: relative;
+    margin: 130px;
+    font-family: 'Boska-BoldItalic';
+}
+/* - - - ANIMACION - - - */
+.slider {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+.slider img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s;
+}
+.slider img.active {
+    opacity: 1;
+}
+@media (max-width: 1440px) {
+    .presentacion{
+        margin-left: -700px;
+    }
+}
+@media (max-width: 1200px) {
+    .presentacion{
+        margin-left: -700px;
+    }
+    footer{
+        font-size: 1.2em;
+    }
+    footer a{
+        margin: 100px;
+    }
+}
+@media (max-width: 992px) {
+    .presentacion{
+        margin-left: -400px;
+    }
+    footer{
+        font-size: 1.2em;
+    }
+    footer a{
+        margin: 50px;
+    }
+}
+@media (max-width: 768px) {
+    .presentacion{
+        margin-left: -300px;
+    }
+}
+@media (max-width: 576px) {
+    main{
+        height: 700px;
+    }
+    .presentacion{
+        margin-left: 0px;
+    }
+    footer{
+        flex-direction: column;
+        height: 200px;
+    }
+    footer a{
+        margin: 1dvh;
+    }
+}
+
